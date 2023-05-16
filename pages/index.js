@@ -14,37 +14,22 @@ export default function Index({ posts, globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {globalData.blogTitle}
-        </h1>
-        <ul className="w-full">
-          {posts.map((post) => (
-            <li
-              key={post.filePath}
-              className="md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
-            >
-              <Link
-                as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-                href={`/posts/[slug]`}
-              >
-                <a className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                  {post.data.date && (
-                    <p className="uppercase mb-3 font-bold opacity-60">
-                      {post.data.date}
-                    </p>
-                  )}
-                  <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
-                  {post.data.description && (
-                    <p className="mt-3 text-lg opacity-60">
-                      {post.data.description}
-                    </p>
-                  )}
-                  <ArrowIcon className="mt-4" />
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <h1 style="text-align: left;"><strong>Faites d&eacute;coller vos projets avec Marie Ollier</strong></h1>
+<h2 style="text-align: center;"><strong>Vous cherchez un <a href="https://www.marieollier.com/graphiste-illustratrice-bordeaux/">graphiste &agrave; Bordeaux</a>&nbsp;qui puisse vous offrir des prestations de qualit&eacute; ?&nbsp;</strong></h2>
+<p><strong>Le studio de graphisme et illustration de <a title="Marie Ollier" href="https://www.marieollier.com/">Marie Ollier</a> vous propose :&nbsp;</strong></p>
+<ul>
+<li><strong>CR&Eacute;ATION DE LOGO</strong></li>
+<li><strong>IDENTIT&Eacute; VISUELLE</strong></li>
+<li><strong>PACKAGING</strong></li>
+<li><strong>VITRINE</strong></li>
+<li><strong>DESIGN PRODUIT</strong></li>
+<li><strong>WEB DESIGN</strong></li>
+<li><strong>ILLUSTRATION</strong></li>
+<li><strong>DIRECTION ARTISTIQUE</strong><strong><br /></strong></li>
+</ul>
+<p style="text-align: center;"><strong>Offrez vous la cr&eacute;ativit&eacute; sans limite de Marie Ollier</strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<p>&nbsp;</p>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
